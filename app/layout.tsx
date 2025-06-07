@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { playfair, sourcesans } from "../styles/font";
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import { Header } from "../components/layout/header/header";
 
 export const metadata: Metadata = {

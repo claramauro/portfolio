@@ -6,7 +6,7 @@ import { Avatar } from "./avatar";
 
 export function Header() {
     return (
-        <header className="w-full h-44 relative">
+        <header className="w-full h-[132px] relative">
             <div className="flex justify-center items-center">
                 <Navbar />
                 <SwitchThemeBtn />
