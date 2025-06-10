@@ -25,7 +25,7 @@ export function Avatar() {
             if (scrollValue >= scrollMax) {
                 scale = minScale;
                 avatarElement.classList.remove("absolute", "bottom-0", "left-0");
-                avatarElement.classList.add("avatar-fixed-position");
+                avatarElement.classList.add("avatar-fixed");
             } else if (scrollValue === 0) {
                 scale = 1;
             } else {
@@ -33,7 +33,7 @@ export function Avatar() {
                 const scaleValue = (scrollValue * scaleDiff) / scrollMax;
                 scale = 1 - scaleValue;
                 avatarElement.classList.add("absolute", "bottom-0", "left-0");
-                avatarElement.classList.remove("avatar-fixed-position");
+                avatarElement.classList.remove("avatar-fixed");
             }
             avatarElement.style.transform = `scale(${scale})`;
         };
@@ -45,7 +45,7 @@ export function Avatar() {
     return (
         <div
             ref={imgContainer}
-            className="rounded-full border border-white border-3 w-16 h-16 box-shadow absolute bottom-0 left-0 origin-top-left">
+            className="rounded-full border border-white border-3 w-16 h-16 box-shadow absolute bottom-0 left-0 origin-top-left z-50">
             <Image
                 src="/avatar-img.jpg"
                 alt="Clara Mauro-Gioan"

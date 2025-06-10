@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { playfair, inter } from "../styles/font";
 import "../styles/globals.scss";
 import { Header } from "../components/layout/header/header";
+import Footer from "../components/layout/footer";
 
 export const metadata: Metadata = {
     title: "Clara Mauro-Gioan | Portfolio",
@@ -21,6 +22,7 @@ export default function RootLayout({
                     <h1 className={`${playfair.className} antialiased mt-8 text-4xl`}>Clara Mauro-Gioan</h1>
                     <h2 className="text-4xl font-bold mt-4">Développeuse web fullstack JavaScript</h2>
                     {children}
+                    <Footer />
                 </div>
             </body>
         </html>
