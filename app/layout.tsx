@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { playfair, inter } from "../styles/font";
-import "../styles/globals.scss";
+import "../styles/globals.css";
 import { Header } from "../components/layout/header/header";
 import Footer from "../components/layout/footer";
 

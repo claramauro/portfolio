@@ -1,3 +1,4 @@
+import Button from "../components/ui/button";
 import GalleryImg from "@/components/ui/gallery-img/gallery-img";
 import Image from "next/image";
 
@@ -34,47 +35,122 @@ export default function Home() {
             </div>
             <GalleryImg />
             <div className="mt-10">
-                <h3 className="font-bold text-2xl">Compétences</h3>
-                <div className="border border-slate-200 p-6">
-                    <h4 className="font-bold">Front-end</h4>
-                    <ul className="flex flex-wrap gap-4">
-                        <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
-                            <Image src="/icons/html.svg" alt="" width={32} height={32} />
-                            <span>HTML 5</span>
-                        </li>
-                        <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
-                            <Image src="/icons/css.svg" alt="" width={32} height={32} className="scale-125" />
-                            <span>CSS 3</span>
-                        </li>
-                        <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
-                            <Image src="/icons/javascript.svg" alt="" width={32} height={32} />
-                            <span>JavaScript</span>
-                        </li>
-                        <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
-                            <Image src="/icons/typescript.svg" alt="" width={32} height={32} />
-                            <span>TypeScript</span>
-                        </li>
-                    </ul>
+                <h3 className="font-bold text-2xl ">Compétences</h3>
+                <div className="mt-10 flex flex-row gap-6">
+                    <div className="card  w-[calc(33.333%-16px)]">
+                        <h4 className="font-bold mb-4">Front-end</h4>
+                        <ul className="flex flex-wrap gap-4">
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/html.svg" alt="" width={32} height={32} className="scale-[1.1]" />
+                                <span>HTML 5</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/css.svg" alt="" width={32} height={32} className="scale-[1.1]" />
+                                <span>CSS 3</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/javascript.svg" alt="" width={32} height={32} />
+                                <span>JavaScript</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/typescript.svg" alt="" width={32} height={32} />
+                                <span>TypeScript</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/react.svg" alt="" width={32} height={32} />
+                                <span>React</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/next-js.svg" alt="" width={32} height={32} />
+                                <span>Next.js</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/bootstrap.svg" alt="" width={32} height={32} />
+                                <span>Bootstrap</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/tailwind.svg" alt="" width={32} height={32} />
+                                <span>Tailwind</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/sass-square.svg" alt="" width={32} height={32} />
+                                <span>Sass</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/responsive.svg" alt="" width={32} height={32} />
+                                <span>Responsive Design</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="card  w-[calc(33.333%-16px)]">
+                        <h4 className="font-bold mb-4">Back-end</h4>
+                        <ul className="flex flex-wrap gap-4">
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/node.svg" alt="" width={32} height={32} />
+                                <span>Node.js</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/typescript.svg" alt="" width={32} height={32} />
+                                <span>Typescript</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/express.svg" alt="" width={32} height={32} />
+                                <span>Express</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/api.svg" alt="" width={32} height={32} />
+                                <span>API</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/database.svg" alt="" width={32} height={32} />
+                                <span>SQL - NoSQL</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image
+                                    src="/icons/sequelize.svg"
+                                    alt=""
+                                    width={32}
+                                    height={32}
+                                    className="scale-[1.1]"
+                                />
+                                <span>ORM (Sequelize)</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/test-js.svg" alt="" width={32} height={32} />
+                                <span>Tests unitaires</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/ejs.svg" alt="" width={32} height={32} className="scale-[1.1]" />
+                                <span>EJS</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="card  w-[calc(33.333%-16px)]">
+                        <h4 className="font-bold mb-4">Divers</h4>
+                        <ul className="flex flex-wrap gap-4">
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/git.svg" alt="" width={32} height={32} />
+                                <span>Git</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/docker.svg" alt="" width={32} height={32} />
+                                <span>Docker</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/figma.svg" alt="" width={32} height={32} />
+                                <span>Figma</span>
+                            </li>
+                            <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <Image src="/icons/accessibility.svg" alt="" width={32} height={32} />
+                                <span>Accessibilité</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, numquam ipsa! Est quam,
-                    inventore accusantium fugit hic mollitia nihil quasi aut ratione, dolorem aperiam recusandae commodi
-                    error nesciunt omnis libero? Cupiditate excepturi aliquam veritatis minima eaque quidem quo qui
-                    dignissimos sapiente obcaecati officia pariatur, corrupti, expedita, dolorem dolores aliquid! Facere
-                    impedit animi molestias magnam velit itaque dignissimos distinctio at rerum. Maxime sint harum
-                    quaerat ratione quis voluptate possimus, totam magnam doloremque qui praesentium similique corporis
-                    magni officia tenetur porro illum accusamus rerum reprehenderit labore recusandae cupiditate cum.
-                    Reiciendis, ea quae. Nulla aspernatur adipisci mollitia voluptatibus. Facilis, eveniet! Aliquam
-                    excepturi quis itaque dignissimos id doloremque eligendi iusto eaque, hic dolor repudiandae ex dicta
-                    aspernatur, rerum accusamus ad? Cupiditate obcaecati perferendis adipisci. Saepe eveniet nesciunt
-                    natus nisi maiores, ea numquam vitae incidunt doloribus ut beatae rerum sed? Laboriosam neque aut
-                    nulla autem officia impedit expedita nemo ipsam, ratione, cum iure dolorem tenetur! Architecto dicta
-                    ea inventore unde, quibusdam recusandae accusamus aperiam doloribus animi. Nobis recusandae ex
-                    maiores mollitia id impedit excepturi facilis accusantium blanditiis cupiditate, eveniet asperiores
-                    iure labore, unde, voluptatum aspernatur. Quas dignissimos laudantium ex voluptate quaerat, sunt
-                    nemo vero voluptates libero ipsam vel sequi minus veniam commodi mollitia enim. Voluptatibus, ipsa
-                    mollitia. Nisi reprehenderit assumenda impedit ut quisquam adipisci minus?
-                </p>
+                <div className="mt-20 flex flex-row gap-x-4">
+                    <Button text="Télécharger mon CV" />
+                    <Button text="Découvrir mes projets" style="outline" icon="/icons/arrow-right.svg" />
+                </div>
             </div>
         </>
     );
