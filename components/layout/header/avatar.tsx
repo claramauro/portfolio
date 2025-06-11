@@ -39,6 +39,9 @@ export function Avatar() {
         };
         window.addEventListener("scroll", handleScroll);
 
+        //mettre à jour l'état dès le chargement de la page selon le scroll
+        handleScroll();
+
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
