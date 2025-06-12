@@ -37,9 +37,13 @@ export function Header() {
 
     return (
         <header ref={headerRef} className="w-full h-[132px] relative transition-opacity duration-500 ease-in-out z-50">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center relative">
                 <Navbar />
-                <SwitchThemeBtn />
+                <div className="hidden sm:block absolute right-20">
+                    <div className="z-50 fixed">
+                        <SwitchThemeBtn small={false} />
+                    </div>
+                </div>
             </div>
             <Avatar />
         </header>

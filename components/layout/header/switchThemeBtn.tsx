@@ -2,17 +2,20 @@
 
 import Image from "next/image";
 
-export function SwitchThemeBtn() {
+export function SwitchThemeBtn({ small }: { small: boolean }) {
     return (
-        <div className="absolute right-10">
-            <div className="z-50 fixed">
-                <button
-                    type="button"
-                    aria-label="Passer en mode sombre"
-                    className="border border-yellow-800 bg-white p-2 rounded-full h-10">
-                    <Image src="/icons/darkmode-icon.svg" alt="" width={24} height={24} />
-                </button>
-            </div>
+        <div
+            className={`rounded-full border border-slate-200 bg-slate-50 ${small ? "w-[60px]" : "w-[70px]"} ${
+                small ? "h-[30px]" : "h-[40px]"
+            }`}>
+            <button
+                type="button"
+                aria-label="Passer en mode sombre"
+                className={`border border-yellow-800 bg-white rounded-full ${small ? "h-[30px]" : "h-full"} ${
+                    small ? "w-[30px]" : "w-[40px]"
+                } flex justify-center items-center`}>
+                <Image src="/icons/darkmode-icon.svg" alt="" width={24} height={24} className="size-5" />
+            </button>
         </div>
     );
 }
