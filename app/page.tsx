@@ -39,11 +39,11 @@ export default function Home() {
             <div className="container">
                 <div className="mt-10">
                     <h3 className="font-bold text-2xl ">Compétences</h3>
-                    <div className="mt-10 flex flex-row gap-6">
-                        <div className="card  w-[calc(33.333%-16px)]">
+                    <div className="mt-10 flex flex-row flex-wrap gap-6 justify-center">
+                        <div className="card w-full max-w-96 md:w-[calc(50%-0.75rem)] xl:w-[calc(33.333%-1rem)]">
                             <h4 className="font-bold mb-4">Front-end</h4>
                             <ul className="flex flex-wrap gap-4">
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[360px]:w-full w-[calc(50%-0.5rem)] gap-3">
                                     <Image
                                         src="/icons/html.svg"
                                         alt=""
@@ -53,68 +53,68 @@ export default function Home() {
                                     />
                                     <span>HTML 5</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
                                     <Image src="/icons/css.svg" alt="" width={32} height={32} className="scale-[1.1]" />
                                     <span>CSS 3</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
                                     <Image src="/icons/javascript.svg" alt="" width={32} height={32} />
                                     <span>JavaScript</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
                                     <Image src="/icons/typescript.svg" alt="" width={32} height={32} />
                                     <span>TypeScript</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
                                     <Image src="/icons/react.svg" alt="" width={32} height={32} />
                                     <span>React</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
                                     <Image src="/icons/next-js.svg" alt="" width={32} height={32} />
                                     <span>Next.js</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
                                     <Image src="/icons/bootstrap.svg" alt="" width={32} height={32} />
                                     <span>Bootstrap</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
                                     <Image src="/icons/tailwind.svg" alt="" width={32} height={32} />
                                     <span>Tailwind</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
                                     <Image src="/icons/sass-square.svg" alt="" width={32} height={32} />
                                     <span>Sass</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
                                     <Image src="/icons/responsive.svg" alt="" width={32} height={32} />
                                     <span>Responsive Design</span>
                                 </li>
                             </ul>
                         </div>
-                        <div className="card  w-[calc(33.333%-16px)]">
+                        <div className="card w-full max-w-96 md:w-[calc(50%-0.75rem)] xl:w-[calc(33.333%-1rem)]">
                             <h4 className="font-bold mb-4">Back-end</h4>
                             <ul className="flex flex-wrap gap-4">
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <Image src="/icons/node.svg" alt="" width={32} height={32} />
                                     <span>Node.js</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <Image src="/icons/typescript.svg" alt="" width={32} height={32} />
                                     <span>Typescript</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <Image src="/icons/express.svg" alt="" width={32} height={32} />
                                     <span>Express</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <Image src="/icons/api.svg" alt="" width={32} height={32} />
                                     <span>API</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <Image src="/icons/database.svg" alt="" width={32} height={32} />
                                     <span>SQL - NoSQL</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <Image
                                         src="/icons/sequelize.svg"
                                         alt=""
@@ -124,41 +124,46 @@ export default function Home() {
                                     />
                                     <span>ORM (Sequelize)</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <Image src="/icons/test-js.svg" alt="" width={32} height={32} />
                                     <span>Tests unitaires</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <Image src="/icons/ejs.svg" alt="" width={32} height={32} className="scale-[1.1]" />
                                     <span>EJS</span>
                                 </li>
                             </ul>
                         </div>
-                        <div className="card  w-[calc(33.333%-16px)]">
+                        <div className="card w-full max-w-96 md:w-[calc(50%-0.75rem)] xl:w-[calc(33.333%-1rem)]">
                             <h4 className="font-bold mb-4">Divers</h4>
                             <ul className="flex flex-wrap gap-4">
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <Image src="/icons/git.svg" alt="" width={32} height={32} />
                                     <span>Git</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <Image src="/icons/docker.svg" alt="" width={32} height={32} />
                                     <span>Docker</span>
                                 </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
-                                    <Image src="/icons/figma.svg" alt="" width={32} height={32} />
-                                    <span>Figma</span>
-                                </li>
-                                <li className="flex items-center justify-start w-[calc(50%-0.5rem)] gap-4">
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <Image src="/icons/accessibility.svg" alt="" width={32} height={32} />
                                     <span>Accessibilité</span>
+                                </li>
+                                <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
+                                    <Image src="/icons/figma.svg" alt="" width={32} height={32} />
+                                    <span>Figma</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div className="mt-20 flex flex-row gap-x-4">
-                        <Button text="Télécharger mon CV" />
-                        <Button text="Découvrir mes projets" style="outline" icon="/icons/arrow-right.svg" />
+                    <div className="mt-20 flex flex-col justify-center items-center md:flex-row md:flex-wrap xl:justify-start gap-4">
+                        <Button text="Télécharger mon CV" className="w-full max-w-60" />
+                        <Button
+                            text="Découvrir mes projets"
+                            style="outline"
+                            icon="/icons/arrow-right.svg"
+                            className="w-full max-w-60"
+                        />
                     </div>
                 </div>
             </div>
