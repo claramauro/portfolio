@@ -2,15 +2,13 @@
 
 import Image from "next/image";
 import { SwitchThemeBtn } from "./switchThemeBtn";
-import { MouseEvent, useEffect, useRef, useState } from "react";
+import { KeyboardEvent, MouseEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const switchThemeRef = useRef<HTMLDivElement>(null);
     const menuRef = useRef<HTMLDivElement>(null);
-
-    // Gerer focus
 
     function handleClickMenu(event: MouseEvent<HTMLDivElement>) {
         const targetElement = event?.target as Node;
@@ -20,34 +18,39 @@ export function Navbar() {
         setIsMenuOpen(!isMenuOpen);
     }
 
+    function toggleMenuOnKeyPress(event: KeyboardEvent<HTMLDivElement>) {
+        if (event.key === "Enter" && !isMenuOpen) {
+            setIsMenuOpen(true);
+        }
+        if (event.key === "Escape" && isMenuOpen) {
+            setIsMenuOpen(false);
+        }
+    }
+
     useEffect(() => {
-        const handleClickForMenu = (event: globalThis.MouseEvent) => {
+        const handleClickCloseMenu = (event: globalThis.MouseEvent) => {
             const target = event.target as Node;
-
-            if (
-                isMenuOpen &&
-                menuRef.current &&
-                !menuRef.current.contains(target) &&
-                !switchThemeRef.current?.contains(target)
-            ) {
-                console.log("oui");
-
+            if (!isMenuOpen || !menuRef.current) {
+                return;
+            }
+            if (!menuRef.current?.contains(target)) {
                 setIsMenuOpen(false);
             }
         };
 
-        document.addEventListener("mousedown", handleClickForMenu);
+        document.addEventListener("mousedown", handleClickCloseMenu);
 
         return () => {
-            document.removeEventListener("mousedown", handleClickForMenu);
+            document.removeEventListener("mousedown", handleClickCloseMenu);
         };
-    }, []);
+    }, [isMenuOpen]);
 
     return (
         <div className="fixed z-50 top-12 w-full sm:w-1/2">
             {/* Mobile */}
             <div ref={menuRef} className="sm:hidden absolute right-6">
                 <div
+                    onKeyDown={toggleMenuOnKeyPress}
                     onClick={handleClickMenu}
                     tabIndex={0}
                     className={`border border-yellow-800 bg-white min-h-10 min-w-30 text-sm flex flex-col items-center ${
