@@ -48,7 +48,7 @@ export function Avatar() {
     return (
         <div
             ref={imgContainer}
-            className="rounded-full border border-white border-3 w-16 h-16 box-shadow absolute bottom-0 left-0 origin-top-left z-50">
+            className="rounded-full border-3 border-custom-green w-16 h-16 box-shadow absolute bottom-0 left-0 origin-top-left z-50">
             <Image
                 src="/avatar-img.jpg"
                 alt="Clara Mauro-Gioan"

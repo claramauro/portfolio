@@ -1,14 +1,26 @@
 @import "tailwindcss";
 
-:root {
-    --background: #ffffff;
-    --foreground: #171717;
+@theme {
+    --color-custom-brown-dark: #31081F;
+    --color-custom-brown: #A89B8C;
+    --color-custom-brown-light: #c0b1a0;
+    --color-custom-blue: #37515F;
+    --color-custom-green: #EDF0DA;
 }
+
 
 html,
 body {
     height: 100%;
     font-size: 16px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-custom-brown-dark);
 }
 
 .box-shadow {
@@ -25,6 +37,28 @@ body {
     .avatar-fixed {
         position: fixed;
         top: theme("spacing.12");
+    }
+
+    .active {
+        position: relative;
+        /* color: #857b6f; */
+    }
+
+    .active::before,
+    .active::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 3px;
+        background-image: linear-gradient(to right, rgba(49, 8, 31, 0), rgba(113, 63, 18, 0.7), rgba(49, 8, 31, 0));
+        right: 2px;
+        left: 2px;
+        top: -10px;
+    }
+
+    .active::after {
+        top: unset;
+        bottom: -7px;
     }
 
     .card {
@@ -45,9 +79,8 @@ body {
 
     .btn--outline {
         background-color: theme("colors.white");
-        color: theme("colors.black");
+        color: #31081F;
         border-style: solid;
-        border-width: theme("borderWidth.DEFAULT");
-        border-color: theme("colors.black");
+        border-width: 3px;
     }
 }

@@ -1,4 +1,4 @@
-import Button from "../components/ui/button";
+import ButtonLink from "../components/ui/buttonLink";
 import GalleryImg from "../components/ui/gallery-img";
 import Image from "next/image";
 
@@ -157,8 +157,9 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="mt-20 flex flex-col justify-center items-center md:flex-row md:flex-wrap xl:justify-start gap-4">
-                        <Button text="Télécharger mon CV" className="w-full max-w-60" />
-                        <Button
+                        <ButtonLink path="/cv" text="Télécharger mon CV" className="w-full max-w-60" />
+                        <ButtonLink
+                            path="/projects"
                             text="Découvrir mes projets"
                             style="outline"
                             icon="/icons/arrow-right.svg"

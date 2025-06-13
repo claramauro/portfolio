@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function GalleryImg() {
     return (
-        <div className="mt-10 flex flex-row justify-center items-center gap-x-6 overflow-hidden py-2 -mx-4 sm:-mx-8 lg:-mx-12">
+        <div className="mt-10 flex flex-row justify-center items-center gap-x-6 overflow-hidden py-2 -mx-7 sm:-mx-8 lg:-mx-12">
             <div className="flex-none relative w-44 h-52 sm:w-72 sm:h-80">
                 <Image
                     className="rounded-2xl"
