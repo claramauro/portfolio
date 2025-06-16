@@ -21,7 +21,7 @@ export default function RootLayout({
                     <Header />
                     <div className="container">
                         <h1 className={`${playfair.className} antialiased mt-8 text-4xl`}>Clara Mauro-Gioan</h1>
-                        <h2 className="text-4xl font-bold mt-4">Développeuse web fullstack JavaScript</h2>
+                        <h2 className="text-4xl font-bold mt-4">Développeuse web fullstack JavaScript - TypeScript</h2>
                     </div>
                     {children}
                     <Footer />

@@ -6,22 +6,23 @@ export default function Home() {
     return (
         <>
             <div className="container">
-                <p className="mt-10">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, quaerat soluta? Et ex optio error
-                    sed quia doloribus vel magnam? Nostrum, tempora? Accusantium molestias voluptates itaque obcaecati
-                    praesentium adipisci delectus! Doloribus, nihil aut! Numquam sit eveniet consequatur saepe? A
-                    ducimus ex molestiae ipsum, dolorem vitae aspernatur amet accusantium saepe officia, explicabo
-                    cumque voluptatibus dolorum in dignissimos, deleniti ad hic iste. Nobis similique placeat mollitia
-                    labore nisi veritatis exercitationem consectetur nulla earum esse veniam omnis, amet sed magni
-                    autem, quasi rerum quaerat error ratione incidunt doloribus! Sequi fugiat nam officiis ratione!
-                    Distinctio aut nesciunt ex ducimus consectetur fugiat possimus accusamus natus numquam! Ex error,
-                    sed quisquam impedit quasi commodi repellendus magni quo voluptate, magnam deserunt cum minima.
-                    Impedit eum dolorem velit! Blanditiis dolores tempora similique, impedit quia vel ipsum, repellat
-                    dolorem quis libero provident ullam optio facere quam? Nostrum, nulla nesciunt vel, beatae rerum,
-                    repellendus non temporibus repellat laudantium fugiat quod? Et impedit fugiat beatae adipisci porro
-                    aperiam debitis! Totam quis architecto obcaecati debitis ipsum iure autem illum tenetur illo
-                    distinctio? Ad vero quae mollitia veniam, aspernatur eveniet deleniti dolor alias?
-                </p>
+                <h3 className="font-bold text-2xl mt-10">Présentation</h3>
+                <div className="mt-5">
+                    <p>{"< Hello World ! />"}</p>
+                    <p>
+                        Après plusieurs années dans le domaine de la santé en tant qu'infirmière, j’ai choisi de me
+                        reconvertir dans le développement. J’ai rapidement pris goût au développement web lors de mes
+                        débuts en autodidacte, ce qui m’a conduite à intégrer une formation pour compléter mon
+                        apprentissage.
+                    </p>
+                    <p>
+                        À la clé, un titre professionnel de développeuse web et web mobile et de nouvelles compétences !
+                    </p>
+                    <p>
+                        Curieuse, rigoureuse et toujours prête à apprendre, je recherche aujourd’hui un poste de
+                        développeuse web.
+                    </p>
+                </div>
                 <div className="flex flex-row mt-10 gap-2">
                     <a
                         className="size-7"
@@ -38,7 +39,7 @@ export default function Home() {
             <GalleryImg />
             <div className="container">
                 <div className="mt-10">
-                    <h3 className="font-bold text-2xl ">Compétences</h3>
+                    <h3 className="font-bold text-2xl">Compétences</h3>
                     <div className="mt-10 flex flex-row flex-wrap gap-6 justify-center">
                         <div className="card w-full max-w-96 md:w-[calc(50%-0.75rem)] xl:w-[calc(33.333%-1rem)]">
                             <h4 className="font-bold mb-4">Front-end</h4>

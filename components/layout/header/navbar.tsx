@@ -5,6 +5,7 @@ import { SwitchThemeBtn } from "./switchThemeBtn";
 import { KeyboardEvent, MouseEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { navLinks } from "../../../lib/navLinks";
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,21 +13,6 @@ export function Navbar() {
     const menuRef = useRef<HTMLDivElement>(null);
 
     const pathname = usePathname();
-
-    const navLinks = [
-        {
-            name: "Accueil",
-            href: "/",
-        },
-        {
-            name: "Projets",
-            href: "/projets",
-        },
-        {
-            name: "CV",
-            href: "/cv",
-        },
-    ];
 
     function handleClickMenu(event: MouseEvent<HTMLDivElement>) {
         const targetElement = event?.target as Node;
@@ -89,7 +75,7 @@ export function Navbar() {
                                             key={link.name}
                                             className={
                                                 isActive
-                                                    ? "active transition duration-300 hover:text-custom-brown"
+                                                    ? "transition duration-300 text-custom-brown hover:text-custom-brown"
                                                     : "transition duration-300 hover:text-custom-brown"
                                             }>
                                             <Link href={link.href}>{link.name}</Link>

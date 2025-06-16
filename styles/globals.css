@@ -49,11 +49,11 @@ h6 {
         content: "";
         display: block;
         position: absolute;
-        height: 3px;
+        height: 2px;
         background-image: linear-gradient(to right, rgba(49, 8, 31, 0), rgba(113, 63, 18, 0.7), rgba(49, 8, 31, 0));
         right: 2px;
         left: 2px;
-        top: -10px;
+        top: -9px;
     }
 
     .active::after {
@@ -71,16 +71,22 @@ h6 {
     .btn {
         padding: theme("padding.2") theme("padding.7");
         color: theme("colors.white");
-        background-color: theme("colors.black");
+        background-color: theme(colors.custom-blue);
         border-radius: theme("borderRadius.full");
         font-weight: bold;
         font-size: theme("fontSize.sm");
+        transition: all .3s;
+    }
+
+
+    .btn:hover {
+        box-shadow: inset 1px 1px 4px theme(colors.custom-blue), inset -1px -1px 4px #ffffff, 1px 1px 4px theme(colors.custom-blue), -1px -1px 4px #ffffff;
     }
 
     .btn--outline {
         background-color: theme("colors.white");
         color: #31081F;
-        border-style: solid;
-        border-width: 3px;
+        border: 3px solid theme(colors.custom-blue);
     }
+
 }

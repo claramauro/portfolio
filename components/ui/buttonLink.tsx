@@ -14,7 +14,7 @@ export default function ButtonLink({
     icon?: string;
     className?: string;
 }) {
-    let classname = `${style === "outline" ? "btn btn--outline border-custom-blue" : "btn bg-custom-blue"}`;
+    let classname = `${style === "outline" ? "btn btn--outline" : "btn"}`;
     if (className) {
         classname += ` ${className}`;
     }
