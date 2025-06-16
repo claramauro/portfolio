@@ -158,14 +158,27 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="mt-20 flex flex-col justify-center items-center md:flex-row md:flex-wrap xl:justify-start gap-4">
-                        <ButtonLink path="/cv" text="Télécharger mon CV" className="w-full max-w-60" />
-                        <ButtonLink
-                            path="/projects"
-                            text="Découvrir mes projets"
-                            style="outline"
-                            icon="/icons/arrow-right.svg"
-                            className="w-full max-w-60"
-                        />
+                        <ButtonLink path="/cv" className="w-full max-w-60">
+                            Télécharger mon CV
+                        </ButtonLink>
+                        <ButtonLink path="/projects" style="outline" className="w-full max-w-60">
+                            <div className="flex flex-row justify-center items-center gap-2">
+                                Découvrir mes projets
+                                <svg
+                                    className="size-5 text-white"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4 12H20M20 12L16 8M20 12L16 16"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                </svg>
+                            </div>
+                        </ButtonLink>
                     </div>
                 </div>
             </div>

@@ -93,7 +93,7 @@ export function Navbar() {
 
             {/* Desktop */}
             <div className="hidden sm:flex justify-center">
-                <nav className="border border-custom-brown-light bg-white rounded-full p-2 h-10 min-w-[260px] shadow-md">
+                <nav className="border border-custom-brown-light dark:border-neutral-500 bg-white dark:bg-custom-charcoal rounded-full p-2 h-10 min-w-[260px] shadow-md">
                     <ul className="flex flex-row justify-center items-center gap-x-8">
                         {navLinks.map((link) => {
                             const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);

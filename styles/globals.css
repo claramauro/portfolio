@@ -6,7 +6,11 @@
     --color-custom-brown-light: #c0b1a0;
     --color-custom-blue: #37515F;
     --color-custom-green: #EDF0DA;
+    --color-custom-charcoal: #302C39;
+    --color-custom-charcoal-dark: #1B1724;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 
 html,
@@ -23,8 +27,21 @@ h6 {
     color: var(--color-custom-brown-dark);
 }
 
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+    color: #FFF;
+}
+
 .box-shadow {
     box-shadow: 0px 0px 3px 4px rgba(161, 161, 170, 0.5);
+}
+
+.dark .box-shadow {
+    box-shadow: none;
 }
 
 @layer components {
@@ -68,6 +85,10 @@ h6 {
         padding: theme("padding.6");
     }
 
+    .dark .card {
+        border-color: theme(colors.neutral.600);
+    }
+
     .btn {
         padding: theme("padding.2") theme("padding.7");
         color: theme("colors.white");
@@ -87,6 +108,12 @@ h6 {
         background-color: theme("colors.white");
         color: #31081F;
         border: 3px solid theme(colors.custom-blue);
+    }
+
+    .dark .btn--outline {
+        background-color: inherit;
+        color: inherit;
+        border: 2px solid #FFF;
     }
 
 }
