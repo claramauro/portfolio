@@ -1,11 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { SwitchThemeBtn } from "./switchThemeBtn";
 import { KeyboardEvent, MouseEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navLinks } from "../../../lib/navLinks";
+import { navLinks } from "../../../libs/navLinks";
+import ChevronDownIcon from "@/src/components/ui/icons/chevronDown";
+import ChevronUpIcon from "@/src/components/ui/icons/chevronUp";
+import { useThemeContext } from "@/src/contexts/theme";
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +15,9 @@ export function Navbar() {
     const menuRef = useRef<HTMLDivElement>(null);
 
     const pathname = usePathname();
+
+    const { theme } = useThemeContext();
+    const isDarkMode = theme === "dark" ? true : false;
 
     function handleClickMenu(event: MouseEvent<HTMLDivElement>) {
         const targetElement = event?.target as Node;
@@ -57,12 +62,16 @@ export function Navbar() {
                     onKeyDown={toggleMenuOnKeyPress}
                     onClick={handleClickMenu}
                     tabIndex={0}
-                    className={`border border-custom-brown-light bg-white shadow-md min-h-10 min-w-30 flex flex-col items-center ${
+                    className={`border border-custom-brown-light  dark:border-neutral-500 bg-white dark:bg-custom-charcoal shadow-md min-h-10 min-w-30 flex flex-col items-center ${
                         isMenuOpen ? "p-4 rounded-2xl" : "p-2 rounded-full"
                     }`}>
-                    <div className="flex flex-row justify-center items-center gap-2">
+                    <div className="group flex flex-row justify-center items-center gap-2">
                         <span>Menu</span>
-                        <Image src="/icons/chevron-down.svg" width={16} height={16} alt="" />
+                        {isMenuOpen ? (
+                            <ChevronUpIcon isDarkMode={isDarkMode} />
+                        ) : (
+                            <ChevronDownIcon isDarkMode={isDarkMode} />
+                        )}
                     </div>
                     <div className={isMenuOpen ? "" : "hidden"}>
                         <nav className="mt-3 text-center">
@@ -93,7 +102,7 @@ export function Navbar() {
 
             {/* Desktop */}
             <div className="hidden sm:flex justify-center">
-                <nav className="border border-custom-brown-light bg-white rounded-full p-2 h-10 min-w-[260px] shadow-md">
+                <nav className="border border-custom-brown-light dark:border-neutral-500 bg-white dark:bg-custom-charcoal rounded-full p-2 h-10 min-w-[260px] shadow-md">
                     <ul className="flex flex-row justify-center items-center gap-x-8">
                         {navLinks.map((link) => {
                             const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
