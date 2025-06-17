@@ -2,7 +2,7 @@ export default function ChevronDownIcon({ isDarkMode }: { isDarkMode: boolean })
     return (
         <svg
             className={`size-5 transition-transform group-hover:translate-y-0.5 ${
-                isDarkMode ? "text-white" : "text-black"
+                isDarkMode ? "text-white" : "stroke-black"
             }`}
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -10,9 +10,9 @@ export default function ChevronDownIcon({ isDarkMode }: { isDarkMode: boolean })
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round">
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round">
             <path d="m6 9 6 6 6-6" />
         </svg>
     );

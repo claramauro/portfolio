@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { navLinks } from "../../lib/navLinks";
+import { navLinks } from "../../libs/navLinks";
 import Link from "next/link";
 
 export default function Footer() {
@@ -18,8 +18,8 @@ export default function Footer() {
                                 key={link.name}
                                 className={
                                     isActive
-                                        ? "border-b dark:border-neutral-400 transition duration-300"
-                                        : "transition duration-300 border-b border-transparent hover:border-neutral-400"
+                                        ? "border-b border-custom-brown-light dark:border-neutral-400 transition duration-300"
+                                        : "transition duration-300 border-b border-transparent hover:border-custom-brown-light"
                                 }>
                                 <Link href={link.href}>{link.name}</Link>
                             </li>

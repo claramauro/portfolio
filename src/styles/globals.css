@@ -19,7 +19,7 @@ body {
     font-size: 16px;
 }
 
-h2,
+
 h3,
 h4,
 h5,
@@ -27,8 +27,6 @@ h6 {
     color: var(--color-custom-brown-dark);
 }
 
-.dark h1,
-.dark h2,
 .dark h3,
 .dark h4,
 .dark h5,

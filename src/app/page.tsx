@@ -1,15 +1,21 @@
-import { ArrowRightIcon } from "@/components/ui/icons/arrowRight";
+"use client";
+
+import { ArrowRightIcon } from "@/src/components/ui/icons/arrowRight";
 import ButtonLink from "../components/ui/buttonLink";
 import GalleryImg from "../components/ui/gallery-img";
 import Image from "next/image";
-import NextJsIcon from "@/components/ui/icons/nextjs";
-import ResponsiveDesignIcon from "@/components/ui/icons/responsiveDesign";
-import ExpressIcon from "@/components/ui/icons/express";
-import AccessibilityIcon from "@/components/ui/icons/accessibilityIcon";
-import ApiIcon from "@/components/ui/icons/api";
-import TestJsIcon from "@/components/ui/icons/testJs";
+import NextJsIcon from "@/src/components/ui/icons/nextjs";
+import ResponsiveDesignIcon from "@/src/components/ui/icons/responsiveDesign";
+import ExpressIcon from "@/src/components/ui/icons/express";
+import AccessibilityIcon from "@/src/components/ui/icons/accessibilityIcon";
+import ApiIcon from "@/src/components/ui/icons/api";
+import TestJsIcon from "@/src/components/ui/icons/testJs";
+import { useThemeContext } from "../contexts/theme";
 
 export default function Home() {
+    const { theme } = useThemeContext();
+    const isDarkMode = theme === "dark" ? true : false;
+
     return (
         <>
             <div className="container">
@@ -82,7 +88,7 @@ export default function Home() {
                                     <span>React</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <NextJsIcon isDarkMode={true} />
+                                    <NextJsIcon isDarkMode={isDarkMode} />
                                     <span>Next.js</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
@@ -98,7 +104,7 @@ export default function Home() {
                                     <span>Sass</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <ResponsiveDesignIcon isDarkMode={true} />
+                                    <ResponsiveDesignIcon isDarkMode={isDarkMode} />
                                     <span>Responsive Design</span>
                                 </li>
                             </ul>
@@ -115,11 +121,11 @@ export default function Home() {
                                     <span>Typescript</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <ExpressIcon isDarkMode={true} />
+                                    <ExpressIcon isDarkMode={isDarkMode} />
                                     <span>Express</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <ApiIcon isDarkMode={true} />
+                                    <ApiIcon isDarkMode={isDarkMode} />
                                     <span>API</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
@@ -137,7 +143,7 @@ export default function Home() {
                                     <span>ORM (Sequelize)</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <TestJsIcon isDarkMode={false} />
+                                    <TestJsIcon isDarkMode={isDarkMode} />
                                     <span>Tests unitaires</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
@@ -158,7 +164,7 @@ export default function Home() {
                                     <span>Docker</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <AccessibilityIcon isDarkMode={true} />
+                                    <AccessibilityIcon isDarkMode={isDarkMode} />
                                     <span>Accessibilité</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
@@ -175,7 +181,7 @@ export default function Home() {
                         <ButtonLink path="/projects" style="outline" className="w-full max-w-60">
                             <div className="flex flex-row justify-center items-center gap-2">
                                 Découvrir mes projets
-                                <ArrowRightIcon isDarkMode={true} />
+                                <ArrowRightIcon isDarkMode={isDarkMode} />
                             </div>
                         </ButtonLink>
                     </div>

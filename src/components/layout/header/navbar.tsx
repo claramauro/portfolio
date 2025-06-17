@@ -1,13 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { SwitchThemeBtn } from "./switchThemeBtn";
 import { KeyboardEvent, MouseEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navLinks } from "../../../lib/navLinks";
-import ChevronDownIcon from "@/components/ui/icons/chevronDown";
-import ChevronUpIcon from "@/components/ui/icons/chevronUp";
+import { navLinks } from "../../../libs/navLinks";
+import ChevronDownIcon from "@/src/components/ui/icons/chevronDown";
+import ChevronUpIcon from "@/src/components/ui/icons/chevronUp";
+import { useThemeContext } from "@/src/contexts/theme";
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +15,9 @@ export function Navbar() {
     const menuRef = useRef<HTMLDivElement>(null);
 
     const pathname = usePathname();
+
+    const { theme } = useThemeContext();
+    const isDarkMode = theme === "dark" ? true : false;
 
     function handleClickMenu(event: MouseEvent<HTMLDivElement>) {
         const targetElement = event?.target as Node;
@@ -64,7 +67,11 @@ export function Navbar() {
                     }`}>
                     <div className="group flex flex-row justify-center items-center gap-2">
                         <span>Menu</span>
-                        {isMenuOpen ? <ChevronUpIcon isDarkMode={true} /> : <ChevronDownIcon isDarkMode={true} />}
+                        {isMenuOpen ? (
+                            <ChevronUpIcon isDarkMode={isDarkMode} />
+                        ) : (
+                            <ChevronDownIcon isDarkMode={isDarkMode} />
+                        )}
                     </div>
                     <div className={isMenuOpen ? "" : "hidden"}>
                         <nav className="mt-3 text-center">
