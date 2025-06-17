@@ -1,6 +1,13 @@
+import { ArrowRightIcon } from "@/components/ui/icons/arrowRight";
 import ButtonLink from "../components/ui/buttonLink";
 import GalleryImg from "../components/ui/gallery-img";
 import Image from "next/image";
+import NextJsIcon from "@/components/ui/icons/nextjs";
+import ResponsiveDesignIcon from "@/components/ui/icons/responsiveDesign";
+import ExpressIcon from "@/components/ui/icons/express";
+import AccessibilityIcon from "@/components/ui/icons/accessibilityIcon";
+import ApiIcon from "@/components/ui/icons/api";
+import TestJsIcon from "@/components/ui/icons/testJs";
 
 export default function Home() {
     return (
@@ -25,14 +32,18 @@ export default function Home() {
                 </div>
                 <div className="flex flex-row mt-10 gap-2">
                     <a
-                        className="size-7"
+                        className="size-7 dark:size-8"
                         href="https://www.linkedin.com/in/clara-mauro-gioan/"
                         target="__blank"
                         title="Profil LinkedIn">
-                        <Image src="/icons/linkedin.svg" alt="" width={28} height={28} />
+                        <Image src="/icons/linkedin.svg" alt="" width={32} height={32} />
                     </a>
-                    <a className="size-7" href="https://github.com/claramauro" target="__blank" title="Page GitHub">
-                        <Image src="/icons/github.svg" alt="" width={28} height={28} />
+                    <a
+                        className="size-7 dark:size-8"
+                        href="https://github.com/claramauro"
+                        target="__blank"
+                        title="Page GitHub">
+                        <Image src="/icons/github.svg" alt="" width={32} height={32} />
                     </a>
                 </div>
             </div>
@@ -71,7 +82,7 @@ export default function Home() {
                                     <span>React</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <Image src="/icons/next-js.svg" alt="" width={32} height={32} />
+                                    <NextJsIcon isDarkMode={true} />
                                     <span>Next.js</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
@@ -87,7 +98,7 @@ export default function Home() {
                                     <span>Sass</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <Image src="/icons/responsive.svg" alt="" width={32} height={32} />
+                                    <ResponsiveDesignIcon isDarkMode={true} />
                                     <span>Responsive Design</span>
                                 </li>
                             </ul>
@@ -104,11 +115,11 @@ export default function Home() {
                                     <span>Typescript</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image src="/icons/express.svg" alt="" width={32} height={32} />
+                                    <ExpressIcon isDarkMode={true} />
                                     <span>Express</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image src="/icons/api.svg" alt="" width={32} height={32} />
+                                    <ApiIcon isDarkMode={true} />
                                     <span>API</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
@@ -126,7 +137,7 @@ export default function Home() {
                                     <span>ORM (Sequelize)</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image src="/icons/test-js.svg" alt="" width={32} height={32} />
+                                    <TestJsIcon isDarkMode={true} />
                                     <span>Tests unitaires</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
@@ -147,7 +158,7 @@ export default function Home() {
                                     <span>Docker</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image src="/icons/accessibility.svg" alt="" width={32} height={32} />
+                                    <AccessibilityIcon isDarkMode={true} />
                                     <span>Accessibilité</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
@@ -164,19 +175,7 @@ export default function Home() {
                         <ButtonLink path="/projects" style="outline" className="w-full max-w-60">
                             <div className="flex flex-row justify-center items-center gap-2">
                                 Découvrir mes projets
-                                <svg
-                                    className="size-5 text-white"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4 12H20M20 12L16 8M20 12L16 16"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
+                                <ArrowRightIcon isDarkMode={true} />
                             </div>
                         </ButtonLink>
                     </div>
