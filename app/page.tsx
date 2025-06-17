@@ -137,7 +137,7 @@ export default function Home() {
                                     <span>ORM (Sequelize)</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <TestJsIcon isDarkMode={true} />
+                                    <TestJsIcon isDarkMode={false} />
                                     <span>Tests unitaires</span>
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">

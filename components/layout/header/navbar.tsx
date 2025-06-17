@@ -6,6 +6,8 @@ import { KeyboardEvent, MouseEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navLinks } from "../../../lib/navLinks";
+import ChevronDownIcon from "@/components/ui/icons/chevronDown";
+import ChevronUpIcon from "@/components/ui/icons/chevronUp";
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,12 +59,12 @@ export function Navbar() {
                     onKeyDown={toggleMenuOnKeyPress}
                     onClick={handleClickMenu}
                     tabIndex={0}
-                    className={`border border-custom-brown-light bg-white shadow-md min-h-10 min-w-30 flex flex-col items-center ${
+                    className={`border border-custom-brown-light  dark:border-neutral-500 bg-white dark:bg-custom-charcoal shadow-md min-h-10 min-w-30 flex flex-col items-center ${
                         isMenuOpen ? "p-4 rounded-2xl" : "p-2 rounded-full"
                     }`}>
-                    <div className="flex flex-row justify-center items-center gap-2">
+                    <div className="group flex flex-row justify-center items-center gap-2">
                         <span>Menu</span>
-                        <Image src="/icons/chevron-down.svg" width={16} height={16} alt="" />
+                        {isMenuOpen ? <ChevronUpIcon isDarkMode={true} /> : <ChevronDownIcon isDarkMode={true} />}
                     </div>
                     <div className={isMenuOpen ? "" : "hidden"}>
                         <nav className="mt-3 text-center">

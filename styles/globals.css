@@ -58,7 +58,6 @@ h6 {
 
     .active {
         position: relative;
-        /* color: #857b6f; */
     }
 
     .active::before,
@@ -76,6 +75,12 @@ h6 {
     .active::after {
         top: unset;
         bottom: -7px;
+    }
+
+    .dark .active::before,
+    .dark .active::after {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(237, 240, 218, 0.7), rgba(255, 255, 255, 0));
+
     }
 
     .card {
