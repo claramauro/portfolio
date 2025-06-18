@@ -88,6 +88,12 @@ h6 {
         padding: theme("padding.6");
     }
 
+    .card--project {
+        padding: 0;
+        width: 100%;
+        min-height: 600px;
+    }
+
     .dark .card {
         border-color: theme(colors.neutral.600);
     }

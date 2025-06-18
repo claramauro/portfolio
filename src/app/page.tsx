@@ -23,7 +23,7 @@ export default function Home() {
                 <div className="mt-5">
                     <p>{"< Hello World ! />"}</p>
                     <p>
-                        Après plusieurs années dans le domaine de la santé en tant qu'infirmière, j’ai choisi de me
+                        Après plusieurs années dans le domaine de la santé en tant qu&apos;infirmière, j’ai choisi de me
                         reconvertir dans le développement. J’ai rapidement pris goût au développement web lors de mes
                         débuts en autodidacte, ce qui m’a conduite à intégrer une formation pour compléter mon
                         apprentissage.
@@ -39,17 +39,17 @@ export default function Home() {
                 <div className="flex flex-row mt-10 gap-2">
                     <a
                         className="size-7 dark:size-8"
-                        href="https://www.linkedin.com/in/clara-mauro-gioan/"
-                        target="__blank"
-                        title="Profil LinkedIn">
-                        <Image src="/icons/linkedin.svg" alt="" width={32} height={32} />
-                    </a>
-                    <a
-                        className="size-7 dark:size-8"
                         href="https://github.com/claramauro"
                         target="__blank"
                         title="Page GitHub">
                         <Image src="/icons/github.svg" alt="" width={32} height={32} />
+                    </a>
+                    <a
+                        className="size-7 dark:size-8"
+                        href="https://www.linkedin.com/in/clara-mauro-gioan/"
+                        target="__blank"
+                        title="Profil LinkedIn">
+                        <Image src="/icons/linkedin.svg" alt="" width={32} height={32} />
                     </a>
                 </div>
             </div>
