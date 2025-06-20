@@ -4,13 +4,28 @@ import { ArrowRightIcon } from "@/src/components/ui/icons/arrowRight";
 import ButtonLink from "../components/ui/buttonLink";
 import GalleryImg from "../components/ui/gallery-img";
 import Image from "next/image";
-import NextJsIcon from "@/src/components/ui/icons/nextjs";
-import ResponsiveDesignIcon from "@/src/components/ui/icons/responsiveDesign";
-import ExpressIcon from "@/src/components/ui/icons/express";
-import AccessibilityIcon from "@/src/components/ui/icons/accessibilityIcon";
-import ApiIcon from "@/src/components/ui/icons/api";
-import TestJsIcon from "@/src/components/ui/icons/testJs";
 import { useThemeContext } from "../contexts/theme";
+import HtmlSkill from "../components/ui/skills/html";
+import CssSkill from "../components/ui/skills/css";
+import JavascriptSkill from "../components/ui/skills/javascript";
+import TypescriptSkill from "../components/ui/skills/typescript";
+import ReactSkill from "../components/ui/skills/react";
+import NextSkill from "../components/ui/skills/next";
+import BootstrapSkill from "../components/ui/skills/bootstrap";
+import TailwindSkill from "../components/ui/skills/tailwind";
+import SassSkill from "../components/ui/skills/sass";
+import ResponsiveSkill from "../components/ui/skills/responsive";
+import NodeSkill from "../components/ui/skills/node";
+import ExpressSkill from "../components/ui/skills/express";
+import ApiSkill from "../components/ui/skills/api";
+import SqlSkill from "../components/ui/skills/sql";
+import SequelizeSkill from "../components/ui/skills/sequelize";
+import TestSkill from "../components/ui/skills/test";
+import EjsSkill from "../components/ui/skills/ejs";
+import GitSkill from "../components/ui/skills/git";
+import DockerSkill from "../components/ui/skills/docker";
+import AccessibilitySkill from "../components/ui/skills/accessibility";
+import FigmaSkill from "../components/ui/skills/figma";
 
 export default function Home() {
     const { theme } = useThemeContext();
@@ -62,50 +77,34 @@ export default function Home() {
                             <h4 className="font-bold mb-4">Front-end</h4>
                             <ul className="flex flex-wrap gap-4">
                                 <li className="flex items-center justify-start max-[360px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <Image
-                                        src="/icons/html.svg"
-                                        alt=""
-                                        width={32}
-                                        height={32}
-                                        className="scale-[1.1]"
-                                    />
-                                    <span>HTML 5</span>
+                                    <HtmlSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <Image src="/icons/css.svg" alt="" width={32} height={32} className="scale-[1.1]" />
-                                    <span>CSS 3</span>
+                                    <CssSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <Image src="/icons/javascript.svg" alt="" width={32} height={32} />
-                                    <span>JavaScript</span>
+                                    <JavascriptSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <Image src="/icons/typescript.svg" alt="" width={32} height={32} />
-                                    <span>TypeScript</span>
+                                    <TypescriptSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <Image src="/icons/react.svg" alt="" width={32} height={32} />
-                                    <span>React</span>
+                                    <ReactSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <NextJsIcon isDarkMode={isDarkMode} />
-                                    <span>Next.js</span>
+                                    <NextSkill isDarkMode={isDarkMode} />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <Image src="/icons/bootstrap.svg" alt="" width={32} height={32} />
-                                    <span>Bootstrap</span>
+                                    <BootstrapSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <Image src="/icons/tailwind.svg" alt="" width={32} height={32} />
-                                    <span>Tailwind</span>
+                                    <TailwindSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <Image src="/icons/sass-square.svg" alt="" width={32} height={32} />
-                                    <span>Sass</span>
+                                    <SassSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-3">
-                                    <ResponsiveDesignIcon isDarkMode={isDarkMode} />
-                                    <span>Responsive Design</span>
+                                    <ResponsiveSkill isDarkMode={isDarkMode} />
                                 </li>
                             </ul>
                         </div>
@@ -113,42 +112,28 @@ export default function Home() {
                             <h4 className="font-bold mb-4">Back-end</h4>
                             <ul className="flex flex-wrap gap-4">
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image src="/icons/node.svg" alt="" width={32} height={32} />
-                                    <span>Node.js</span>
+                                    <NodeSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image src="/icons/typescript.svg" alt="" width={32} height={32} />
-                                    <span>Typescript</span>
+                                    <TypescriptSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <ExpressIcon isDarkMode={isDarkMode} />
-                                    <span>Express</span>
+                                    <ExpressSkill isDarkMode={isDarkMode} />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <ApiIcon isDarkMode={isDarkMode} />
-                                    <span>API</span>
+                                    <ApiSkill isDarkMode={isDarkMode} />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image src="/icons/database.svg" alt="" width={32} height={32} />
-                                    <span>SQL - NoSQL</span>
+                                    <SqlSkill text="SQL - NoSQL" />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image
-                                        src="/icons/sequelize.svg"
-                                        alt=""
-                                        width={32}
-                                        height={32}
-                                        className="scale-[1.1]"
-                                    />
-                                    <span>ORM (Sequelize)</span>
+                                    <SequelizeSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <TestJsIcon isDarkMode={isDarkMode} />
-                                    <span>Tests unitaires</span>
+                                    <TestSkill isDarkMode={isDarkMode} />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image src="/icons/ejs.svg" alt="" width={32} height={32} className="scale-[1.1]" />
-                                    <span>EJS</span>
+                                    <EjsSkill />
                                 </li>
                             </ul>
                         </div>
@@ -156,29 +141,25 @@ export default function Home() {
                             <h4 className="font-bold mb-4">Divers</h4>
                             <ul className="flex flex-wrap gap-4">
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image src="/icons/git.svg" alt="" width={32} height={32} />
-                                    <span>Git</span>
+                                    <GitSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image src="/icons/docker.svg" alt="" width={32} height={32} />
-                                    <span>Docker</span>
+                                    <DockerSkill />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <AccessibilityIcon isDarkMode={isDarkMode} />
-                                    <span>Accessibilité</span>
+                                    <AccessibilitySkill isDarkMode={isDarkMode} />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <Image src="/icons/figma.svg" alt="" width={32} height={32} />
-                                    <span>Figma</span>
+                                    <FigmaSkill />
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className="mt-20 flex flex-col justify-center items-center md:flex-row md:flex-wrap xl:justify-start gap-4">
-                        <ButtonLink path="/cv" className="w-full max-w-60">
+                        <ButtonLink path="/cv" className="w-full max-w-64">
                             Télécharger mon CV
                         </ButtonLink>
-                        <ButtonLink path="/projects" style="outline" className="w-full max-w-60">
+                        <ButtonLink path="/projects" style="outline" className="w-full max-w-64">
                             <div className="flex flex-row justify-center items-center gap-2">
                                 Découvrir mes projets
                                 <ArrowRightIcon isDarkMode={isDarkMode} />

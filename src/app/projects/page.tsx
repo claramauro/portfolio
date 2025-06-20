@@ -1,4 +1,16 @@
 import ButtonLink from "@/src/components/ui/buttonLink";
+import ApiSkill from "@/src/components/ui/skills/api";
+import BootstrapSkill from "@/src/components/ui/skills/bootstrap";
+import DockerSkill from "@/src/components/ui/skills/docker";
+import ExpressSkill from "@/src/components/ui/skills/express";
+import GitSkill from "@/src/components/ui/skills/git";
+import HtmlSkill from "@/src/components/ui/skills/html";
+import NodeSkill from "@/src/components/ui/skills/node";
+import ReactSkill from "@/src/components/ui/skills/react";
+import SassSkill from "@/src/components/ui/skills/sass";
+import SequelizeSkill from "@/src/components/ui/skills/sequelize";
+import SqlSkill from "@/src/components/ui/skills/sql";
+import TypescriptSkill from "@/src/components/ui/skills/typescript";
 import Image from "next/image";
 
 export default function Projects() {
@@ -62,10 +74,52 @@ export default function Projects() {
                             odio at autem veniam rem distinctio, hic deserunt alias minus vel sunt, excepturi ducimus
                             dolorum explicabo ipsam!
                         </p>
-                        <div className="mt-4">icone</div>
                         <div className="mt-4">
-                            <ButtonLink path="#">Voir le site</ButtonLink>
-                            <ButtonLink path="#" style="outline">
+                            <h5 className="underline underline-offset-6">Stack :</h5>
+                            <ul className="mt-2">
+                                <li>
+                                    <HtmlSkill />
+                                </li>
+                                <li>
+                                    <SassSkill />
+                                </li>
+                                <li>
+                                    <TypescriptSkill />
+                                </li>
+                                <li>
+                                    <ReactSkill />
+                                </li>
+                                <li>
+                                    <BootstrapSkill />
+                                </li>
+                                <li>
+                                    <NodeSkill />
+                                </li>
+                                <li>
+                                    <ApiSkill isDarkMode={false} />
+                                </li>
+                                <li>
+                                    <ExpressSkill isDarkMode={false} />
+                                </li>
+                                <li>
+                                    <SqlSkill text="PostgreSQL" />
+                                </li>
+                                <li>
+                                    <SequelizeSkill />
+                                </li>
+                                <li>
+                                    <DockerSkill />
+                                </li>
+                                <li>
+                                    <GitSkill />
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 mt-4">
+                            <ButtonLink path="#" className="w-full max-w-64 text-xs">
+                                Voir le site
+                            </ButtonLink>
+                            <ButtonLink path="#" style="outline" className="w-full max-w-64 text-xs">
                                 Voir le repository GitHub
                             </ButtonLink>
                         </div>
