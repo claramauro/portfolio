@@ -8,6 +8,75 @@
     --color-custom-green: #EDF0DA;
     --color-custom-charcoal: #302C39;
     --color-custom-charcoal-dark: #1B1724;
+
+
+    /*Bouton next */
+    --animate-slide-in-from-right: slide-in-from-right 0.3s forwards;
+
+    /*Nouvelle image entre par la droite vers la gauche */
+    @keyframes slide-in-from-right {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    ;
+
+    --animate-slide-out-to-left : slide-out-to-left 0.3s forwards;
+
+    /* Image sort vers la gauche */
+    @keyframes slide-out-to-left {
+        0% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+    }
+
+    ;
+
+    /*Bouton previous*/
+    --animate-slide-in-from-left : slide-in-from-left 0.3s forwards;
+
+    /* Image entre de la gauche vers la droite */
+    @keyframes slide-in-from-left {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    ;
+
+    --animate-slide-out-to-right : slide-out-to-right 0.3s forwards;
+
+    /* Image sort vers la droite */
+    @keyframes slide-out-to-right {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -40,6 +109,14 @@ h6 {
 
 .dark .box-shadow {
     box-shadow: none;
+}
+
+.carroussel__img {
+    opacity: 0;
+}
+
+.carroussel__img--current {
+    opacity: 1;
 }
 
 @layer components {
@@ -89,7 +166,7 @@ h6 {
     }
 
     .card--project {
-        padding: 0;
+        padding: theme("padding.10");
         width: 100%;
         min-height: 600px;
     }
