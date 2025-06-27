@@ -2,6 +2,7 @@
 
 import ButtonCarrousel from "@/src/components/ui/buttonCarrousel";
 import ButtonLink from "@/src/components/ui/buttonLink";
+import Carrousel from "@/src/components/ui/carrousel";
 import ApiSkill from "@/src/components/ui/skills/api";
 import BootstrapSkill from "@/src/components/ui/skills/bootstrap";
 import DockerSkill from "@/src/components/ui/skills/docker";
@@ -15,33 +16,10 @@ import SequelizeSkill from "@/src/components/ui/skills/sequelize";
 import SqlSkill from "@/src/components/ui/skills/sql";
 import TypescriptSkill from "@/src/components/ui/skills/typescript";
 import Image from "next/image";
-import { useState } from "react";
 
-const img = ["home.png", "search.png", "tableau-de-bord.png", "demandes.png"];
+const projectsImages = { petFosterConnect: ["home.png", "search.png", "tableau-de-bord.png", "demandes.png"] };
 
 export default function Projects() {
-    const [carrouselIndex, setCarrouselIndex] = useState(0);
-    const [direction, setDirection] = useState<"prev" | "next">("next");
-    const [leaving, setLeaving] = useState<number | null>(null);
-
-    function handlePreviousImg() {
-        setLeaving(carrouselIndex);
-        setDirection("prev");
-        setTimeout(() => {
-            setCarrouselIndex((prevIndex) => (prevIndex === 0 ? img.length - 1 : prevIndex - 1)); // 3. changer l'image
-            setLeaving(null); // Reset
-        }, 300);
-    }
-
-    function handleNextImg() {
-        setLeaving(carrouselIndex);
-        setDirection("next");
-        setTimeout(() => {
-            setCarrouselIndex((prevIndex) => (prevIndex === img.length - 1 ? 0 : prevIndex + 1));
-            setLeaving(null);
-        }, 300);
-    }
-
     return (
         <div className="container">
             <h3 className="font-bold text-2xl mt-10">Mes projets</h3>
@@ -78,7 +56,7 @@ export default function Projects() {
                 </a>
             </div>
             <div className="mt-15">
-                <div className="card card--project flex items-stretch gap-4">
+                <div className="card card--project flex items-stretch gap-8">
                     <div className="w-[60%]">
                         <h4 className="font-bold mb-4">Pet Foster Connect</h4>
                         <p className="mb-2">
@@ -152,38 +130,7 @@ export default function Projects() {
                         </div>
                     </div>
                     <div className="w-[40%]">
-                        <div className="relative mb-16">
-                            <div className="relative w-full h-[400px] overflow-hidden">
-                                <div className="absolute z-40 -left-6 top-1/2" onClick={handlePreviousImg}>
-                                    <ButtonCarrousel direction="left" />
-                                </div>
-                                {img.map((image, index) => {
-                                    const isCurrent = carrouselIndex === index;
-                                    const isLeaving = leaving === index;
-
-                                    let animClass = "";
-                                    if (isCurrent && direction === "next") animClass += "animate-slide-in-from-right";
-                                    if (isCurrent && direction === "prev") animClass += "animate-slide-in-from-left";
-                                    if (isLeaving && direction === "next") animClass += "animate-slide-out-to-left";
-                                    if (isLeaving && direction === "prev") animClass += "animate-slide-out-to-right";
-                                    return (
-                                        <div key={index} className="">
-                                            <Image
-                                                src={`/projects/pfc/${image}`}
-                                                alt=""
-                                                fill
-                                                className={`${
-                                                    isCurrent ? "carroussel__img--current" : ""
-                                                } carroussel__img rounded-2xl object-cover object-top ${animClass}`}
-                                            />
-                                        </div>
-                                    );
-                                })}
-                                <div className="absolute z-40 -right-6 top-1/2" onClick={handleNextImg}>
-                                    <ButtonCarrousel direction="right" />
-                                </div>
-                            </div>
-                        </div>
+                        <Carrousel images={projectsImages.petFosterConnect} />
                         <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 ">
                             <ButtonLink path="#" className="w-full max-w-64">
                                 Voir le site
