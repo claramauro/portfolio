@@ -127,7 +127,7 @@ export default function Home() {
                                     <SqlSkill text="SQL - NoSQL" />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
-                                    <SequelizeSkill />
+                                    <SequelizeSkill text={"ORM (Sequelize)"} />
                                 </li>
                                 <li className="flex items-center justify-start max-[380px]:w-full w-[calc(50%-0.5rem)] gap-2">
                                     <TestSkill isDarkMode={isDarkMode} />

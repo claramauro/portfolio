@@ -90,8 +90,6 @@ h6 {
     }
 
     .card--project {
-        padding: theme("padding.10");
-        padding-right: theme("padding.14");
         width: 100%;
         min-height: 600px;
     }

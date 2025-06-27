@@ -1,6 +1,5 @@
 "use client";
 
-import ButtonCarrousel from "@/src/components/ui/buttonCarrousel";
 import ButtonLink from "@/src/components/ui/buttonLink";
 import Carrousel from "@/src/components/ui/carrousel";
 import ApiSkill from "@/src/components/ui/skills/api";
@@ -15,11 +14,15 @@ import SassSkill from "@/src/components/ui/skills/sass";
 import SequelizeSkill from "@/src/components/ui/skills/sequelize";
 import SqlSkill from "@/src/components/ui/skills/sql";
 import TypescriptSkill from "@/src/components/ui/skills/typescript";
+import { useThemeContext } from "@/src/contexts/theme";
 import Image from "next/image";
 
 const projectsImages = { petFosterConnect: ["home.png", "search.png", "tableau-de-bord.png", "demandes.png"] };
 
 export default function Projects() {
+    const { theme } = useThemeContext();
+    const isDarkMode = theme === "dark" ? true : false;
+
     return (
         <div className="container">
             <h3 className="font-bold text-2xl mt-10">Mes projets</h3>
@@ -56,9 +59,9 @@ export default function Projects() {
                 </a>
             </div>
             <div className="mt-15">
-                <div className="card card--project flex items-stretch gap-8">
-                    <div className="w-[60%]">
-                        <h4 className="font-bold mb-4">Pet Foster Connect</h4>
+                <div className="card card--project p-8 lg:p-10 lg:pr-12 shadow-sm flex flex-col lg:flex-row items-stretch gap-10 lg:max-xl:gap-12">
+                    <div className="lg:w-[60%]">
+                        <h4 className="font-bold mb-4 text-lg">Pet Foster Connect</h4>
                         <p className="mb-2">
                             Application web visant à mettre en relation des associations de protection animale et des
                             familles souhaitant accueillir temporairement un animal avant son adoption définitive.
@@ -89,49 +92,49 @@ export default function Projects() {
                         </div>
                         <div className="mb-4">
                             <h5 className="underline underline-offset-6 mb-3">Stack technique :</h5>
-                            <ul className="mt-2 grid gap-y-2 place-items-center grid-cols-[repeat(auto-fit,minmax(96px,1fr))]">
-                                <li className="flex flex-col items-center justify-center">
+                            <ul className="mt-2 grid gap-y-2 place-items-start md:place-items-center grid-cols-[repeat(auto-fit,minmax(140px,1fr))]">
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
                                     <HtmlSkill />
                                 </li>
-                                <li className="flex flex-col items-center justify-center">
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
                                     <SassSkill />
                                 </li>
-                                <li className="flex flex-col items-center justify-center">
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
                                     <TypescriptSkill />
                                 </li>
-                                <li className="flex flex-col items-center justify-center">
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
                                     <ReactSkill />
                                 </li>
-                                <li className="flex flex-col items-center justify-center">
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
                                     <BootstrapSkill />
                                 </li>
-                                <li className="flex flex-col items-center justify-center">
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
                                     <NodeSkill />
                                 </li>
-                                <li className="flex flex-col items-center justify-center">
-                                    <ApiSkill isDarkMode={false} />
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <ApiSkill isDarkMode={isDarkMode} />
                                 </li>
-                                <li className="flex flex-col items-center justify-center">
-                                    <ExpressSkill isDarkMode={false} />
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <ExpressSkill isDarkMode={isDarkMode} />
                                 </li>
-                                <li className="flex flex-col items-center justify-center">
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
                                     <SqlSkill text="PostgreSQL" />
                                 </li>
-                                <li className="flex flex-col items-center justify-center text-center">
-                                    <SequelizeSkill />
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center text-center">
+                                    <SequelizeSkill text={"Sequelize"} />
                                 </li>
-                                <li className="flex flex-col items-center justify-center">
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
                                     <DockerSkill />
                                 </li>
-                                <li className="flex flex-col items-center justify-center">
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
                                     <GitSkill />
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div className="w-[40%]">
+                    <div className="lg:w-[40%]">
                         <Carrousel images={projectsImages.petFosterConnect} />
-                        <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 ">
+                        <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 mt-20">
                             <ButtonLink path="#" className="w-full max-w-64">
                                 Voir le site
                             </ButtonLink>
