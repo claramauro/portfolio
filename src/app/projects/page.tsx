@@ -2,14 +2,19 @@
 
 import ButtonLink from "@/src/components/ui/buttonLink";
 import Carrousel from "@/src/components/ui/carrousel";
+import AccessibilitySkill from "@/src/components/ui/skills/accessibility";
 import ApiSkill from "@/src/components/ui/skills/api";
 import BootstrapSkill from "@/src/components/ui/skills/bootstrap";
+import CssSkill from "@/src/components/ui/skills/css";
 import DockerSkill from "@/src/components/ui/skills/docker";
+import EjsSkill from "@/src/components/ui/skills/ejs";
 import ExpressSkill from "@/src/components/ui/skills/express";
 import GitSkill from "@/src/components/ui/skills/git";
 import HtmlSkill from "@/src/components/ui/skills/html";
+import JavascriptSkill from "@/src/components/ui/skills/javascript";
 import NodeSkill from "@/src/components/ui/skills/node";
 import ReactSkill from "@/src/components/ui/skills/react";
+import ResponsiveSkill from "@/src/components/ui/skills/responsive";
 import SassSkill from "@/src/components/ui/skills/sass";
 import SequelizeSkill from "@/src/components/ui/skills/sequelize";
 import SqlSkill from "@/src/components/ui/skills/sql";
@@ -17,7 +22,10 @@ import TypescriptSkill from "@/src/components/ui/skills/typescript";
 import { useThemeContext } from "@/src/contexts/theme";
 import Image from "next/image";
 
-const projectsImages = { petFosterConnect: ["home.png", "search.png", "tableau-de-bord.png", "demandes.png"] };
+const projectsImages = {
+    petFosterConnect: ["pfc/home.png", "pfc/search.png", "pfc/tableau-de-bord.png", "pfc/demandes.png"],
+    ocoffee: ["ocoffee/home.png", "ocoffee/catalogue.png", "ocoffee/admin.png", "ocoffee/admin-product.png"],
+};
 
 export default function Projects() {
     const { theme } = useThemeContext();
@@ -88,6 +96,7 @@ export default function Projects() {
                                 <li>Inscription, connexion, mot de passe oublié (JWT)</li>
                                 <li>Back office pour les associations</li>
                                 <li>Envoi de demandes par email, gestion de profil</li>
+                                <li>Responsive design</li>
                             </ul>
                         </div>
                         <div className="mb-4">
@@ -99,6 +108,10 @@ export default function Projects() {
                                 <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
                                     <SassSkill />
                                 </li>
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <ResponsiveSkill isDarkMode={isDarkMode} />
+                                </li>
+
                                 <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
                                     <TypescriptSkill />
                                 </li>
@@ -135,10 +148,98 @@ export default function Projects() {
                     <div className="lg:w-[40%]">
                         <Carrousel images={projectsImages.petFosterConnect} />
                         <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 mt-20">
-                            <ButtonLink path="#" className="w-full max-w-64">
+                            <ButtonLink path="https://petfoster.claramauro.fr/" className="w-full max-w-70">
                                 Voir le site
                             </ButtonLink>
-                            <ButtonLink path="#" style="outline" className="w-full max-w-64">
+                            <ButtonLink
+                                path="https://github.com/claramauro/Pet-Foster-Connect-front"
+                                style="outline"
+                                className="w-full max-w-70">
+                                Voir le repository GitHub (Front)
+                            </ButtonLink>
+                            <ButtonLink
+                                path="https://github.com/claramauro/Pet-Foster-Connect-back"
+                                style="outline"
+                                className="w-full max-w-70">
+                                Voir le repository GitHub (Back)
+                            </ButtonLink>
+                        </div>
+                    </div>
+                </div>
+                <div className="card card--project p-8 lg:p-10 lg:pr-12 shadow-sm flex flex-col lg:flex-row items-stretch gap-10 lg:max-xl:gap-12">
+                    <div className="lg:w-[60%]">
+                        <h4 className="font-bold mb-4 text-lg">oCoffee</h4>
+                        <p className="mb-2">
+                            Site vitrine conçu pour une boutique fictive de café, avec catalogue des produits et une
+                            interface d&apos;administration sécurisée pour la gestion des produits (opérations CRUD).
+                        </p>
+                        <p className="mb-2">
+                            Cette application web est un projet réalisé en cours de formation que j&apos;ai réalisée
+                            seule et auquel j&apos;ai ajouté d&apos;autres fonctionnalités par la suite :
+                        </p>
+                        <ul className="list-inside list-disc mb-4">
+                            <li>Réalisation d&apos;un site à partir d&apos;une demande (fictive) d&apos;un client</li>
+                            <li>Intégration à partir de wireframes</li>
+                            <li>Modélisation base de données</li>
+                            <li>Développement full stack</li>
+                            <li>Déploiement</li>
+                        </ul>
+                        <div className="mb-4">
+                            <h5 className="underline underline-offset-6 mb-2">Fonctionnalités :</h5>
+                            <ul className="list-inside list-disc">
+                                <li>Affichage des produits avec filtres par catégorie</li>
+                                <li>Partie back-office administrateur (avec authentification)</li>
+                                <li>Responsive design</li>
+                                <li>Accessibilité</li>
+                            </ul>
+                        </div>
+                        <div className="mb-4">
+                            <h5 className="underline underline-offset-6 mb-3">Stack technique :</h5>
+                            <ul className="mt-2 grid gap-y-2 place-items-start md:place-items-center grid-cols-[repeat(auto-fit,minmax(140px,1fr))]">
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <HtmlSkill />
+                                </li>
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <CssSkill />
+                                </li>
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <JavascriptSkill />
+                                </li>
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <ResponsiveSkill isDarkMode={isDarkMode} />
+                                </li>
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <AccessibilitySkill isDarkMode={isDarkMode} />
+                                </li>
+
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <NodeSkill />
+                                </li>
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <ExpressSkill isDarkMode={isDarkMode} />
+                                </li>
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center text-center">
+                                    <EjsSkill />
+                                </li>
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <SqlSkill text="PostgreSQL" />
+                                </li>
+                                <li className="flex flex-row gap-x-2 md:flex-col items-center justify-center">
+                                    <GitSkill />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="lg:w-[40%]">
+                        <Carrousel images={projectsImages.ocoffee} />
+                        <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 mt-20">
+                            <ButtonLink path="https://ocoffee.claramauro.fr/" className="w-full max-w-64">
+                                Voir le site
+                            </ButtonLink>
+                            <ButtonLink
+                                path="https://github.com/claramauro/ocoffee"
+                                style="outline"
+                                className="w-full max-w-64">
                                 Voir le repository GitHub
                             </ButtonLink>
                         </div>

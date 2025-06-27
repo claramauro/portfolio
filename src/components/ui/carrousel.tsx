@@ -37,7 +37,7 @@ export default function Carrousel({ images }: { images: string[] }) {
                     {images.map((image, index) => (
                         <div className="relative w-full h-[400px] lg:max-xl:h-[300px] flex-none" key={index}>
                             <Image
-                                src={`/projects/pfc/${image}`}
+                                src={`/projects/${image}`}
                                 alt=""
                                 fill
                                 className={`rounded-2xl object-cover object-top`}
