@@ -17,7 +17,7 @@ export default function ButtonLink({
     }
 
     return (
-        <Link href={path} className={`text-center ${classname}`}>
+        <Link href={path} className={`text-center ${classname}`} target="_blank">
             {children}
         </Link>
     );
