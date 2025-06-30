@@ -40,6 +40,7 @@ export default function Carrousel({ images }: { images: string[] }) {
                                 src={`/projects/${image}`}
                                 alt=""
                                 fill
+                                sizes="(min-width: 1024px) 22rem, 25rem"
                                 className={`rounded-2xl object-cover object-top`}
                             />
                         </div>
