@@ -18,9 +18,9 @@ export default function RootLayout({
     return (
         <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
             <body
-                className={`${inter.className} antialiased bg-slate-50 dark:bg-custom-charcoal sm:mx-8 lg:mx-16 dark:text-white`}>
+                className={`${inter.className} antialiased bg-slate-50 dark:bg-custom-charcoal sm:mx-8 lg:mx-16 dark:text-white min-h-screen`}>
                 <ThemeProvider>
-                    <div className="max-w-7xl mx-auto border-x border-slate-200 dark:border-neutral-600 bg-white dark:bg-custom-charcoal-dark pt-12 px-6 sm:px-8 lg:px-12">
+                    <div className="max-w-7xl mx-auto border-x border-slate-200 dark:border-neutral-600 bg-white dark:bg-custom-charcoal-dark pt-12 px-6 sm:px-8 lg:px-12  min-h-screen flex flex-col">
                         <Header />
                         <div className="container">
                             <h1 className={`${playfair.className} antialiased mt-8 text-4xl dark:text-white`}>
@@ -30,7 +30,7 @@ export default function RootLayout({
                                 Développeuse web fullstack JavaScript - TypeScript
                             </h2>
                         </div>
-                        {children}
+                        <main className="flex-1">{children}</main>
                         <Footer />
                     </div>
                 </ThemeProvider>

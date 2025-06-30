@@ -24,13 +24,8 @@ import TailwindSkill from "@/src/components/ui/skills/tailwind";
 import TestSkill from "@/src/components/ui/skills/test";
 import TypescriptSkill from "@/src/components/ui/skills/typescript";
 import { useThemeContext } from "@/src/contexts/theme";
+import { projectsImages } from "@/src/libs/projectsImages";
 import Image from "next/image";
-
-const projectsImages = {
-    petFosterConnect: ["pfc/home.png", "pfc/search.png", "pfc/tableau-de-bord.png", "pfc/demandes.png"],
-    ocoffee: ["ocoffee/home.png", "ocoffee/catalogue.png", "ocoffee/admin.png", "ocoffee/admin-product.png"],
-    cleriam: ["cleriam/top.png", "cleriam/contact.png"],
-};
 
 export default function Projects() {
     const { theme } = useThemeContext();
