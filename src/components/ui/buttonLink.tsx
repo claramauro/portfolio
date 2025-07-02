@@ -3,11 +3,13 @@ import Link from "next/link";
 export default function ButtonLink({
     children,
     path,
+    externalLink,
     style = "default",
     className,
 }: {
     children: React.ReactNode;
     path: string;
+    externalLink: boolean;
     style?: "default" | "outline";
     className?: string;
 }) {
@@ -17,7 +19,7 @@ export default function ButtonLink({
     }
 
     return (
-        <Link href={path} className={`text-center ${classname}`} target="_blank">
+        <Link href={path} className={`text-center ${classname}`} target={externalLink ? "_blank" : "_self"}>
             {children}
         </Link>
     );

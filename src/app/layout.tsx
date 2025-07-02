@@ -7,7 +7,13 @@ import { ThemeProvider } from "../contexts/theme";
 
 export const metadata: Metadata = {
     title: "Clara Mauro-Gioan | Portfolio",
-    description: "Portfolio de Clara Mauro-Gioan, développeuse web fullstack JavaScript",
+    description: "Portfolio de Clara Mauro-Gioan, développeuse web fullstack JavaScript & TypeScript.",
+    openGraph: {
+        type: "website",
+        description: "Portfolio de Clara Mauro-Gioan, développeuse web fullstack JavaScript & TypeScript.",
+        url: "https://portfolio.claramauro.fr/",
+        images: [{ url: "https://portfolio.claramauro.fr/og-image.png" }],
+    },
 };
 
 export default function RootLayout({

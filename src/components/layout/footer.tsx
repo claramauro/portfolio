@@ -12,7 +12,7 @@ export default function Footer() {
             <nav>
                 <ul className="flex flex-row items-center justify-center gap-x-6">
                     {navLinks.map((link) => {
-                        const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                        const isActive = link.href === "/" ? pathname === "/" : pathname === link.href;
                         return (
                             <li
                                 key={link.name}
@@ -21,7 +21,9 @@ export default function Footer() {
                                         ? "border-b border-custom-brown-light dark:border-neutral-400 transition duration-300"
                                         : "transition duration-300 border-b border-transparent hover:border-custom-brown-light"
                                 }>
-                                <Link href={link.href}>{link.name}</Link>
+                                <Link href={link.href} target={link.externalLink ? "_blank" : "_self"}>
+                                    {link.name}
+                                </Link>
                             </li>
                         );
                     })}

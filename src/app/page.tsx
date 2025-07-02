@@ -156,10 +156,13 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="mt-20 flex flex-col justify-center items-center md:flex-row md:flex-wrap xl:justify-start gap-4">
-                        <ButtonLink path="/cv" className="w-full max-w-64">
+                        <ButtonLink
+                            path="https://cv.claramauro.fr/CV_Clara_Mauro-Gioan.pdf"
+                            externalLink={true}
+                            className="w-full max-w-64">
                             Télécharger mon CV
                         </ButtonLink>
-                        <ButtonLink path="/projects" style="outline" className="w-full max-w-64">
+                        <ButtonLink path="/projects" externalLink={false} style="outline" className="w-full max-w-64">
                             <div className="flex flex-row justify-center items-center gap-2">
                                 Découvrir mes projets
                                 <ArrowRightIcon isDarkMode={isDarkMode} />
