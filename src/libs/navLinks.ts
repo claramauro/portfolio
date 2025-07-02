@@ -1,6 +1,7 @@
 type navLinks = {
     name: string;
     href: string;
+    externalLink?: boolean;
 };
 
 export const navLinks: navLinks[] = [
@@ -14,6 +15,7 @@ export const navLinks: navLinks[] = [
     },
     {
         name: "CV",
-        href: "/cv",
+        href: "https://cv.claramauro.fr/CV_Clara_Mauro-Gioan.pdf",
+        externalLink: true,
     },
 ];

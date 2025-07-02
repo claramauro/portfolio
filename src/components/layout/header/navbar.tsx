@@ -113,7 +113,9 @@ export function Navbar() {
                                             ? "active transition duration-300 hover:text-custom-brown"
                                             : "transition duration-300 hover:text-custom-brown"
                                     }>
-                                    <Link href={link.href}>{link.name}</Link>
+                                    <Link href={link.href} target={link.externalLink ? "_blank" : "_self"}>
+                                        {link.name}
+                                    </Link>
                                 </li>
                             );
                         })}

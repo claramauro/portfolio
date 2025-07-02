@@ -113,6 +113,7 @@ export default function Projects() {
                     <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 mt-10">
                         <ButtonLink
                             path="https://github.com/claramauro/portfolio"
+                            externalLink={true}
                             style="outline"
                             className="w-full max-w-70">
                             Voir repository GitHub
@@ -182,7 +183,10 @@ export default function Projects() {
                         </ul>
                     </div>
                     <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 mt-10">
-                        <ButtonLink path="https://infobioco.com/eln-olympeis/" className="w-full max-w-70">
+                        <ButtonLink
+                            path="https://infobioco.com/eln-olympeis/"
+                            externalLink={true}
+                            className="w-full max-w-70">
                             Voir le site
                         </ButtonLink>
                     </div>
@@ -271,17 +275,22 @@ export default function Projects() {
                     <div className="lg:w-[40%]">
                         <Carrousel images={projectsImages.petFosterConnect} />
                         <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 mt-20">
-                            <ButtonLink path="https://petfoster.claramauro.fr/" className="w-full max-w-70">
+                            <ButtonLink
+                                path="https://petfoster.claramauro.fr/"
+                                externalLink={true}
+                                className="w-full max-w-70">
                                 Voir le site
                             </ButtonLink>
                             <ButtonLink
                                 path="https://github.com/claramauro/Pet-Foster-Connect-front"
+                                externalLink={true}
                                 style="outline"
                                 className="w-full max-w-70">
                                 Voir le repository GitHub (Front)
                             </ButtonLink>
                             <ButtonLink
                                 path="https://github.com/claramauro/Pet-Foster-Connect-back"
+                                externalLink={true}
                                 style="outline"
                                 className="w-full max-w-70">
                                 Voir le repository GitHub (Back)
@@ -356,11 +365,15 @@ export default function Projects() {
                     <div className="lg:w-[40%]">
                         <Carrousel images={projectsImages.ocoffee} />
                         <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 mt-20">
-                            <ButtonLink path="https://ocoffee.claramauro.fr/" className="w-full max-w-64">
+                            <ButtonLink
+                                path="https://ocoffee.claramauro.fr/"
+                                externalLink={true}
+                                className="w-full max-w-64">
                                 Voir le site
                             </ButtonLink>
                             <ButtonLink
                                 path="https://github.com/claramauro/ocoffee"
+                                externalLink={true}
                                 style="outline"
                                 className="w-full max-w-64">
                                 Voir le repository GitHub
@@ -414,7 +427,7 @@ export default function Projects() {
                     <div className="lg:w-[40%]">
                         <Carrousel images={projectsImages.cleriam} />
                         <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 mt-20">
-                            <ButtonLink path="https://cleriam.com/" className="w-full max-w-64">
+                            <ButtonLink path="https://cleriam.com/" externalLink={true} className="w-full max-w-64">
                                 Voir le site
                             </ButtonLink>
                         </div>
