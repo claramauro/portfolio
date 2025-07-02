@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/portfolio.claramauro.fr
+    - /bin/cp -R ./out/* $DEPLOYPATH
