@@ -24,6 +24,9 @@ jobs:
       - name: Build & export static site
         run: npm run build
 
+      - name: Copy .htaccess to ./out
+        run: cp .htaccess ./out/
+
       - name: Deploy via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
