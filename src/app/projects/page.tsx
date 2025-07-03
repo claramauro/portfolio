@@ -116,7 +116,7 @@ export default function Projects() {
                             externalLink={true}
                             style="outline"
                             className="w-full max-w-70">
-                            Voir repository GitHub
+                            Voir le repository GitHub
                         </ButtonLink>
                     </div>
                 </div>
