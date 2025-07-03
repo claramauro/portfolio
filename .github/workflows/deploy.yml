@@ -31,6 +31,7 @@ jobs:
           username: ${{secrets.FTP_USERNAME}}
           password: ${{secrets.FTP_PASSWORD}}
           protocol: ftps
-          local-dir: ./out/
+          local-dir: ./out/*
           server-dir: /portfolio.claramauro.fr/
+          clean: true
 
