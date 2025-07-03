@@ -32,6 +32,6 @@ jobs:
           password: ${{secrets.FTP_PASSWORD}}
           protocol: ftps
           local-dir: ./out/
-          server-dir: /portfolio.claramauro.fr/
+          server-dir: ./
           dangerous-clean-slate: true
 
