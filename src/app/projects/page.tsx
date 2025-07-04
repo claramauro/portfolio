@@ -75,7 +75,7 @@ export default function Projects() {
                         <li>Réalisation des maquettes</li>
                         <li>Intégration</li>
                         <li>Développement front-end</li>
-                        <li>Déploiement</li>
+                        <li>Déploiement (automatisé avec un workflow GitHub Actions)</li>
                     </ul>
                     <div className="mb-4">
                         <h5 className="underline underline-offset-6 mb-4">Stack technique :</h5>

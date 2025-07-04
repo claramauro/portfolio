@@ -113,7 +113,10 @@ export function Navbar() {
                                             ? "active transition duration-300 hover:text-custom-brown"
                                             : "transition duration-300 hover:text-custom-brown"
                                     }>
-                                    <Link href={link.href} target={link.externalLink ? "_blank" : "_self"}>
+                                    <Link
+                                        href={link.href}
+                                        target={link.externalLink ? "_blank" : "_self"}
+                                        className="text-sm">
                                         {link.name}
                                     </Link>
                                 </li>
