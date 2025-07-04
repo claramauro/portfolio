@@ -21,7 +21,10 @@ export default function Footer() {
                                         ? "border-b border-custom-brown-light dark:border-neutral-400 transition duration-300"
                                         : "transition duration-300 border-b border-transparent hover:border-custom-brown-light"
                                 }>
-                                <Link href={link.href} target={link.externalLink ? "_blank" : "_self"}>
+                                <Link
+                                    href={link.href}
+                                    target={link.externalLink ? "_blank" : "_self"}
+                                    className="text-sm">
                                     {link.name}
                                 </Link>
                             </li>
